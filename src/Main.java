@@ -5,11 +5,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         String instructions = """
-                    Enter the command:\n
-                    1. Show lists of todos;\n
-                    2. Show todo by ID;\n
-                    3. Add todo;\n
-                    4. Delete todo by ID;\n
+                    Enter number of the command:
+                    1. Show lists of todos;
+                    2. Show todo by ID;
+                    3. Add todo;
+                    4. Delete todo by ID;
                     5. Edit todo by ID;\n
                 """;
 
