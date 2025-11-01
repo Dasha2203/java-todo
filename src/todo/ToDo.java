@@ -1,4 +1,9 @@
+package todo;
+
+import java.util.UUID;
+
 public class ToDo {
+    private String id;
     private String title;
     private boolean isCompleted;
     private String color;
@@ -7,12 +12,14 @@ public class ToDo {
         this.title = title;
         this.color = "";
         this.isCompleted = false;
+        generateUUID();
     }
 
     public ToDo(String title, boolean isCompleted, String color) {
         this.title = title;
         this.isCompleted = isCompleted;
         this.color = color;
+        generateUUID();
     }
 
     public boolean isCompleted() {
@@ -41,5 +48,9 @@ public class ToDo {
 
     public void toggleCompleted() {
         this.isCompleted = !this.isCompleted;
+    }
+
+    private void generateUUID() {
+        this.id = UUID.randomUUID().toString();
     }
 }
