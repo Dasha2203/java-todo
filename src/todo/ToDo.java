@@ -12,14 +12,21 @@ public class ToDo {
         this.title = title;
         this.color = "";
         this.isCompleted = false;
-        generateUUID();
+        this.id = generateUUID();
+    }
+
+    public ToDo(String title, String color) {
+        this.title = title;
+        this.color = color;
+        this.isCompleted = false;
+        this.id = generateUUID();
     }
 
     public ToDo(String title, boolean isCompleted, String color) {
         this.title = title;
         this.isCompleted = isCompleted;
         this.color = color;
-        generateUUID();
+        this.id = generateUUID();
     }
 
     public boolean isCompleted() {
@@ -50,7 +57,20 @@ public class ToDo {
         this.isCompleted = !this.isCompleted;
     }
 
-    private void generateUUID() {
-        this.id = UUID.randomUUID().toString();
+    private String generateUUID() {
+        return UUID.randomUUID().toString();
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + this.id +
+                "\nTitle: " + this.title +
+                "\nColor: " + this.color +
+                "\nCompleted: " + this.isCompleted + "\n";
+
     }
 }
