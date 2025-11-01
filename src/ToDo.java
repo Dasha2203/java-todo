@@ -39,4 +39,7 @@ public class ToDo {
         this.title = title;
     }
 
+    public void toggleCompleted() {
+        this.isCompleted = !this.isCompleted;
+    }
 }
